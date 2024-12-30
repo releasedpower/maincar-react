@@ -1,0 +1,9 @@
+.vehicles-page {
+    padding: 20px;
+  }
+  
+  .vehicles-page .MuiButton-root {
+    display: block;
+    margin: 0 auto;
+  }
+  

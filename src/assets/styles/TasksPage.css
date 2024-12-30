@@ -1,0 +1,9 @@
+.maintenance-tasks-page {
+    padding: 20px;
+  }
+  
+  .maintenance-tasks-page .MuiButton-root {
+    display: block;
+    margin: 0 auto;
+  }
+  
