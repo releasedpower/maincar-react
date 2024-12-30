@@ -1,6 +1,7 @@
 import React from 'react';
 import { List, ListItem, ListItemText } from '@mui/material';
 import { NavLink } from 'react-router-dom';
+import '../assets/styles/Sidebar.css';
 
 const Sidebar = () => {
   return (
