@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from '../components/Sidebar';
 import '../assets/styles/MainLayout.css';
 import Topbar from '../components/Topbar';
+import Footer from '../components/Footer';
 
 function MainLayout({ children }) {
   return (
@@ -10,6 +11,7 @@ function MainLayout({ children }) {
       <main className="content">
         <Topbar />
         {children}
+        <Footer />
       </main>
     </div>
   );
