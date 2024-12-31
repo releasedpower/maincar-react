@@ -5,6 +5,10 @@
   background-color: rgb(47, 47, 47);
 }
 
+header {
+  z-index: 3 !important;
+}
+
 .header-title {
   font-weight: bold;
   color: white;

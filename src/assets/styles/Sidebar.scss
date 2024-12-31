@@ -3,4 +3,38 @@
   background-color: #d9d5cc;
   border-right: 1px solid #ddd;
   padding: 20px;
+  height: 100%;
+  
+}
+
+.sidebarWrapper {
+  position: relative;
+}
+
+.toggledSidebar {
+  display: none;
+}
+
+button {
+  all: unset; /* Reset all styles */
+  background: none; /* Remove default background */
+  border: none; /* Remove default border */
+  padding: 0; /* Remove default padding */
+  font: inherit; /* Inherit the font style */
+  cursor: pointer; /* Ensure the pointer cursor on hover */
+}
+
+.toggleIcon {
+  position: absolute;
+  top: 0;
+  right: -32px;
+  z-index: 5;
+  background-color: #d9d5cc;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.toggled {
+  transform: scaleX(-1);
 }
