@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Grid, Card, CardContent, Typography, Button, TextField, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material';
-import '../assets/styles/VehiclesPage.css';
+import '../assets/styles/VehiclesPage.scss';
 
 const VehiclesPage = () => {
   const [vehicles, setVehicles] = useState([

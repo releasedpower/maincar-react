@@ -1,7 +1,7 @@
 import React from 'react';
-import { Grid, Card, CardContent, Typography, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import { Grid, Typography, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { ArrowUpward, ArrowDownward } from '@mui/icons-material';
-import '../assets/styles/DashboardPage.css'; // Optional custom styling
+import '../assets/styles/DashboardPage.scss'; // Optional custom styling
 import SimpleCard from '../components/SimpleCard';
 
 const DashboardPage = () => {
@@ -100,35 +100,36 @@ const DashboardPage = () => {
         <Typography variant="h5" gutterBottom>
           Maintenance Tasks
         </Typography>
+         {/* Table Section */}
         <TableContainer component={Paper}>
           <Table>
             <TableHead>
               <TableRow>
                 <TableCell style={{ fontWeight: 'bold' }}>
                   Vehicle
-                  <ArrowUpward fontSize="small" /> {/* Default arrow pointing up */}
+                  <ArrowUpward fontSize="small" /> {/* Smaller arrow */}
                 </TableCell>
                 <TableCell style={{ fontWeight: 'bold' }}>
                   Task Name
-                  <ArrowDownward fontSize="small" /> {/* Default arrow pointing down */}
+                  <ArrowDownward fontSize="small" /> {/* Smaller arrow */}
                 </TableCell>
                 <TableCell style={{ fontWeight: 'bold' }}>
                   Due Date
-                  <ArrowUpward fontSize="small" /> {/* Default arrow pointing up */}
+                  <ArrowUpward fontSize="small" /> {/* Smaller arrow */}
                 </TableCell>
                 <TableCell style={{ fontWeight: 'bold' }}>
                   Days Remaining
-                  <ArrowDownward fontSize="small" /> {/* Default arrow pointing down */}
+                  <ArrowDownward fontSize="small" /> {/* Smaller arrow */}
                 </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {tasks.map((task, index) => (
-                <TableRow key={index}>
-                  <TableCell>{task.vehicle}</TableCell>
-                  <TableCell>{task.taskName}</TableCell>
-                  <TableCell>{task.dueDate}</TableCell>
-                  <TableCell>{calculateDaysRemaining(task.dueDate)}</TableCell>
+                <TableRow key={index} className="table-row"> {/* Add hover effect to row */}
+                  <TableCell className="table-cell">{task.vehicle}</TableCell> {/* Add hover effect to cell */}
+                  <TableCell className="table-cell">{task.taskName}</TableCell>
+                  <TableCell className="table-cell">{task.dueDate}</TableCell>
+                  <TableCell className="table-cell">{calculateDaysRemaining(task.dueDate)}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

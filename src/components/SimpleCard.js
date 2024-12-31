@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/styles/SimpleCard.css';
+import '../assets/styles/SimpleCard.scss';
 
 const SimpleCard = ({ title, count, description }) => {
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Grid, Card, CardContent, Typography } from '@mui/material';
-import '../assets/styles/HistoryPage.css';
+import '../assets/styles/HistoryPage.scss';
 
 const HistoryPage = () => {
   const [completedTasks, setCompletedTasks] = useState([

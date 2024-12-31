@@ -2,7 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 import { ExitToApp } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
-import '../assets/styles/Topbar.css';
+import '../assets/styles/Topbar.scss';
 
 const Topbar = () => {
   const navigate = useNavigate();
