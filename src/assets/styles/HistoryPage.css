@@ -1,5 +1,7 @@
 .history-page {
     padding: 30px;
+    min-height: 100vh;
+    background-color: #ededed;
   }
   
   .history-page .MuiButton-root {

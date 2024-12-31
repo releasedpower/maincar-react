@@ -4,7 +4,7 @@ import '../assets/styles/Footer.css';
 
 const Footer = () => {
   return (
-    <Box component="footer" className="footer" sx={{ padding: '20px', backgroundColor: '#333', color: '#fff' }}>
+    <Box component="footer" className="footer">
       <Typography variant="body2" align="center">
         &copy; {new Date().getFullYear()} Riana Rahajary. All rights reserved.
       </Typography>

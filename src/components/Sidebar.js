@@ -7,16 +7,16 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <List>
-        <ListItem button component={NavLink} to={"/"} activeClassName="active">
+        <ListItem button component={NavLink} to={"/"}>
           <ListItemText primary="Dashboard" />
         </ListItem>
-        <ListItem button component={NavLink} to={"/vehicles"} activeClassName="active">
+        <ListItem button component={NavLink} to={"/vehicles"}>
           <ListItemText primary="Vehicles" />
         </ListItem>
-        <ListItem button component={NavLink} to={"/tasks"} activeClassName="active">
+        <ListItem button component={NavLink} to={"/tasks"}>
           <ListItemText primary="Maintenance Tasks" />
         </ListItem>
-        <ListItem button component={NavLink} to={"/history"} activeClassName="active">
+        <ListItem button component={NavLink} to={"/history"}>
           <ListItemText primary="History" />
         </ListItem>
       </List>

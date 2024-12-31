@@ -1,5 +1,6 @@
 .maintenance-tasks-page {
     padding: 30px;
+    min-height: 100vh;
   }
   
   .maintenance-tasks-page .MuiButton-root {

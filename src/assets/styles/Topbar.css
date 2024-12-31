@@ -1,21 +1,28 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .header-title {
-    font-weight: bold;
-    color: white;
-  }
-  
-  .header-actions {
-    display: flex;
-    align-items: center;
-  }
-  
-  .MuiButton-root {
-    color: white;
-    text-transform: none;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(47, 47, 47);
+}
+
+.header-title {
+  font-weight: bold;
+  color: white;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds space between the greeting and sign-out button */
+}
+
+.greet-user {
+  font-weight: 100;
+  font-size: medium;
+  color: white;
+}
+
+.MuiButton-root {
+  color: white;
+  text-transform: none;
+}

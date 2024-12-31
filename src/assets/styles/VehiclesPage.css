@@ -1,5 +1,6 @@
 .vehicles-page {
     padding: 30px;
+    min-height: 100vh;
   }
   
   .vehicles-page .MuiButton-root {

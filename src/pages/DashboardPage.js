@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Card, CardContent, Typography, Button } from '@mui/material';
 import '../assets/styles/DashboardPage.css'; // Optional custom styling
+import SimpleCard from '../components/SimpleCard';
 
 const DashboardPage = () => {
   return (
@@ -12,37 +13,28 @@ const DashboardPage = () => {
       {/* Statistics Section */}
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} md={4}>
-          <Card>
-            <CardContent>
-              <Typography variant="h6">Upcoming maintenance task</Typography>
-              <Typography variant="h4" color="primary">
-                3
-              </Typography>
-              <Typography color="textSecondary">Reminders this week</Typography>
-            </CardContent>
-          </Card>
+        <SimpleCard
+          title="Upcoming maintenance task"
+          count={3}
+          description="Reminders this week"
+          countColor="#eb653f"
+      />
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Card>
-            <CardContent>
-              <Typography variant="h6">Registered Vehicles</Typography>
-              <Typography variant="h4" color="primary">
-                2
-              </Typography>
-              <Typography color="textSecondary">Cars in your garage</Typography>
-            </CardContent>
-          </Card>
+          <SimpleCard
+            title="Registered Vehicles"
+            count={3}
+            description="Cars in your garage"
+            countColor="#eb653f"
+        />
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Card>
-            <CardContent>
-              <Typography variant="h6">Completed Tasks</Typography>
-              <Typography variant="h4" color="primary">
-                15
-              </Typography>
-              <Typography color="textSecondary">Tasks completed</Typography>
-            </CardContent>
-          </Card>
+          <SimpleCard
+              title="Completed Tasks"
+              count={3}
+              description="Tasks completed"
+              countColor="#eb653f"
+          />
         </Grid>
       </Grid>
 
@@ -53,24 +45,40 @@ const DashboardPage = () => {
         </Typography>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
-            <Button
-              variant="contained"
-              color="primary"
-              fullWidth
-              href="/reminders"
-            >
-              View Reminders
-            </Button>
+          <Button
+            variant="contained"
+            href="/reminders"
+            fullWidth
+            sx={{
+              height: '50px', // Customize height
+              backgroundColor: '#eb653f', // Set the background color
+              boxShadow: 'none', // Remove shadow
+              '&:hover': {
+                backgroundColor: '#db6342', // Set hover background color
+              },
+            }}
+          >
+            Go to Reminders
+          </Button>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Button
-              variant="contained"
-              color="secondary"
-              fullWidth
-              href="/vehicles"
-            >
-              Manage Vehicles
-            </Button>
+          <Button
+            variant="contained"
+            href="/reminders"
+            fullWidth
+            sx={{
+              height: '50px', // Customize height
+              // width: '200px',
+              backgroundColor: '#4a4a4a', // Set the background color
+              boxShadow: 'none', // Remove shadow
+              '&:hover': {
+                backgroundColor: '#383838', // Set hover background color
+              },
+            }}
+          >
+            Manage Vehicles
+          </Button>
+
           </Grid>
         </Grid>
       </div>

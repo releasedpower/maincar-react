@@ -10,24 +10,27 @@ const Topbar = () => {
   const handleSignOut = () => {
     // Sign out logic (clear user session, cookies, etc.)
     console.log('User signed out');
-    
-    // Redirect to login or home page after sign out
     navigate('/login');
   };
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" sx={{ boxShadow: 'none'}}>
       <Toolbar className="header">
         <Typography variant="h6" className="header-title">
           Car Maintenance Tracker
         </Typography>
-        
+
         <div className="header-actions">
+          <Typography variant="h6" className="greet-user">
+            Hi, Mister
+          </Typography>
           <Button
             variant="contained"
-            color="secondary"
             startIcon={<ExitToApp />}
             onClick={handleSignOut}
+            sx={{
+              backgroundColor:'#474747',
+            }}
           >
             Sign Out
           </Button>
