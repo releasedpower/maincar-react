@@ -25,8 +25,8 @@ const DashboardPage = () => {
       </Typography>
       <div className="summary">
       {/* Statistics Section */}
-      <Grid container spacing={9}>
-        <Grid item xs={12} sm={6} md={4}>
+      <Grid container className='cardsContainer'>
+        <Grid item>
           <SimpleCard
             title="Upcoming maintenance task"
             count={3}
@@ -34,7 +34,7 @@ const DashboardPage = () => {
             countColor="#eb653f"
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item>
           <SimpleCard
             title="Registered Vehicles"
             count={3}
@@ -42,7 +42,7 @@ const DashboardPage = () => {
             countColor="#eb653f"
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item>
           <SimpleCard
             title="Completed Tasks"
             count={3}
