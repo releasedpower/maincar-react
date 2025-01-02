@@ -1,15 +1,21 @@
-import React from 'react';
-import Sidebar from '../components/Sidebar';
+import React, { useState } from 'react';
 import '../assets/styles/MainLayout.scss';
 import Topbar from '../components/Topbar';
 import Footer from '../components/Footer';
+import Sidebar from '../components/Sidebar';
 
 function MainLayout({ children }) {
+  const [isSidebarActive, setIsSidebarActive] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsSidebarActive((prevState) => !prevState);
+  };
+
   return (
     <div className="layout">
-      <Sidebar />
+      <Sidebar isActive={isSidebarActive}/>
       <main className="content">
-        <Topbar />
+        <Topbar toggleSidebar={toggleSidebar} />
         {children}
         <Footer />
       </main>

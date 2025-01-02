@@ -21,11 +21,11 @@ const DashboardPage = () => {
   return (
     <div className="dashboard">
       <Typography variant="h4" gutterBottom>
-        Welcome to Your Car Maintenance Tracker
+        Dashboard
       </Typography>
-
+      <div className="summary">
       {/* Statistics Section */}
-      <Grid container spacing={3}>
+      <Grid container spacing={9}>
         <Grid item xs={12} sm={6} md={4}>
           <SimpleCard
             title="Upcoming maintenance task"
@@ -51,6 +51,7 @@ const DashboardPage = () => {
           />
         </Grid>
       </Grid>
+      </div>
 
       {/* Quick Actions */}
       <div className="quick-actions">
@@ -107,19 +108,19 @@ const DashboardPage = () => {
               <TableRow>
                 <TableCell style={{ fontWeight: 'bold' }}>
                   Vehicle
-                  <ArrowUpward fontSize="small" /> {/* Smaller arrow */}
+                  <ArrowUpward style={{fontSize: 'small', marginLeft: '5px'}} />
                 </TableCell>
                 <TableCell style={{ fontWeight: 'bold' }}>
                   Task Name
-                  <ArrowDownward fontSize="small" /> {/* Smaller arrow */}
+                  <ArrowDownward style={{fontSize: 'small', marginLeft: '5px'}} />
                 </TableCell>
                 <TableCell style={{ fontWeight: 'bold' }}>
                   Due Date
-                  <ArrowUpward fontSize="small" /> {/* Smaller arrow */}
+                  <ArrowUpward style={{fontSize: 'small', marginLeft: '5px'}} />
                 </TableCell>
                 <TableCell style={{ fontWeight: 'bold' }}>
                   Days Remaining
-                  <ArrowDownward fontSize="small" /> {/* Smaller arrow */}
+                  <ArrowDownward style={{fontSize: 'small', marginLeft: '5px'}} />
                 </TableCell>
               </TableRow>
             </TableHead>
@@ -129,7 +130,7 @@ const DashboardPage = () => {
                   <TableCell className="table-cell">{task.vehicle}</TableCell> {/* Add hover effect to cell */}
                   <TableCell className="table-cell">{task.taskName}</TableCell>
                   <TableCell className="table-cell">{task.dueDate}</TableCell>
-                  <TableCell className="table-cell">{calculateDaysRemaining(task.dueDate)}</TableCell>
+                  <TableCell className="table-cell">{calculateDaysRemaining(task.dueDate)} Days</TableCell>
                 </TableRow>
               ))}
             </TableBody>

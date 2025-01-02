@@ -3,10 +3,29 @@
   justify-content: space-between;
   align-items: center;
   background-color: rgb(47, 47, 47);
+  // height: 60px;
 }
 
 header {
   z-index: 3 !important;
+}
+
+.title-toggle {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+.hamburger {
+  all: unset;
+  cursor: pointer;
+  color: white; /* Default color */
+  background: none;
+
+}
+
+.hamburger:hover {
+  color: orange; /* Hover color */
 }
 
 .header-title {
@@ -17,7 +36,7 @@ header {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 10px; /* Adds space between the greeting and sign-out button */
+  gap: 10px; 
 }
 
 .greet-user {

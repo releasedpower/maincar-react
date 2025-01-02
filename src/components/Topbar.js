@@ -4,11 +4,10 @@ import { ExitToApp } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import '../assets/styles/Topbar.scss';
 
-const Topbar = () => {
+const Topbar = ({toggleSidebar}) => {
   const navigate = useNavigate();
 
   const handleSignOut = () => {
-    // Sign out logic (clear user session, cookies, etc.)
     console.log('User signed out');
     navigate('/login');
   };
@@ -16,9 +15,18 @@ const Topbar = () => {
   return (
     <AppBar position="sticky" sx={{ boxShadow: 'none'}}>
       <Toolbar className="header">
-        <Typography variant="h6" className="header-title">
-          Car Maintenance Tracker
-        </Typography>
+        <div className="title-toggle">
+          <button
+              className="hamburger"
+              onClick={toggleSidebar}
+              aria-label="Toggle sidebar"
+            >
+            ☰
+          </button>
+          <Typography variant="h6" className="header-title">
+            Car Maintenance Tracker
+          </Typography>
+        </div>
 
         <div className="header-actions">
           <Typography variant="h6" className="greet-user">
